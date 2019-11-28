@@ -1,0 +1,16 @@
+.root{
+    -fx-background-color: #263238;
+}
+
+.jfx-text-field{
+    -fx-text-fill:#CFD8DC;
+}
+
+.jfx-password-field{
+    -fx-text-fill: #CFD8DC;
+}
+
+.glyph-icon{
+    -fx-fill: #CFD8DC;
+}
+
