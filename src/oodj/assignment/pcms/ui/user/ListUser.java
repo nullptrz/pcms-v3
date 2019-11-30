@@ -6,12 +6,12 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class AddUser extends Application {
+public class ListUser extends Application {
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("fxml/add_user.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("fxml/list_user.fxml"));
+        stage.setTitle("List Users");
         Scene scene = new Scene(root);
-        stage.setTitle("Add User");
         stage.setScene(scene);
         stage.show();
     }

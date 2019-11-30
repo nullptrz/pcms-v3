@@ -1,4 +1,4 @@
-package assignment.pcms.ui.user;
+package assignment.pcms.ui.user.controllers;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
@@ -6,10 +6,13 @@ import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import com.sun.org.apache.xml.internal.security.Init;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 
-public class AddUserController {
+public class AddUserController implements Initializable {
 
     @FXML
     private ResourceBundle resources;
@@ -54,15 +57,7 @@ public class AddUserController {
     }
 
     @FXML
-    void initialize() {
-        assert userid != null : "fx:id=\"userid\" was not injected: check your FXML file 'add_user.fxml'.";
-        assert name != null : "fx:id=\"name\" was not injected: check your FXML file 'add_user.fxml'.";
-        assert emailAddress != null : "fx:id=\"emailAddress\" was not injected: check your FXML file 'add_user.fxml'.";
-        assert roleCombo != null : "fx:id=\"roleCombo\" was not injected: check your FXML file 'add_user.fxml'.";
-        assert username != null : "fx:id=\"username\" was not injected: check your FXML file 'add_user.fxml'.";
-        assert password != null : "fx:id=\"password\" was not injected: check your FXML file 'add_user.fxml'.";
-        assert saveButton != null : "fx:id=\"saveButton\" was not injected: check your FXML file 'add_user.fxml'.";
-        assert cancelButton != null : "fx:id=\"cancelButton\" was not injected: check your FXML file 'add_user.fxml'.";
+    public void initialize(URL url, ResourceBundle rb) {
 
     }
 }
