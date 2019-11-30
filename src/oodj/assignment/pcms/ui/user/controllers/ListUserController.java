@@ -1,7 +1,12 @@
 package assignment.pcms.ui.user.controllers;
 
+import java.io.File;
+import java.io.IOException;
 import java.net.URL;
+import java.nio.file.Files;
+import java.util.Collection;
 import java.util.ResourceBundle;
+import java.util.stream.Collectors;
 
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
@@ -16,7 +21,7 @@ import javafx.scene.layout.AnchorPane;
 
 public class ListUserController implements Initializable {
 
-    ObservableList<User> list = FXCollections.observableArrayList();
+
 
     @FXML
     private ResourceBundle resources;
@@ -50,10 +55,31 @@ public class ListUserController implements Initializable {
 
     @FXML
     public void initialize(URL url, ResourceBundle rb) {
-        initCol();
+        try {
+            loadData();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
-    private void initCol(){
+    private void loadData() throws IOException {
+        Collection<User> list = Files.readAllLines(new File("C:\\JavaDev\\pcms-v3\\src\\oodj\\assignment\\pcms\\ui\\user\\controllers\\users.txt").toPath())
+                .stream()
+                .map(line -> {
+                    String[] details = line.split(",");
+                    User user = new User();
+                    user.setUserid(details[0]);
+                    user.setName(details[1]);
+                    user.setEmailAddress(details[2]);
+                    user.setLoginName(details[3]);
+                    user.setUserRole(details[4]);
+                    user.setStatus(details[5]);
+                    return user;
+                })
+                .collect(Collectors.toList());
+
+        ObservableList<User> details = FXCollections.observableArrayList(list);
+
         useridCol.setCellValueFactory(new PropertyValueFactory<>("userid"));
         nameCol.setCellValueFactory(new PropertyValueFactory<>("name"));
         emailAddressCol.setCellValueFactory(new PropertyValueFactory<>("emailAddress"));
@@ -61,32 +87,41 @@ public class ListUserController implements Initializable {
         userRoleCol.setCellValueFactory(new PropertyValueFactory<>("userRole"));
         statusCol.setCellValueFactory(new PropertyValueFactory<>("status"));
 
-    }
-
-    private void loadData(){
+        tableView.setItems(details);
 
     }
 
     public static class User{
-        private final SimpleStringProperty userid;
-        private final SimpleStringProperty name;
-        private final SimpleStringProperty emailAddress;
-        private final SimpleStringProperty loginName;
-        private final SimpleStringProperty userRole;
-        private final SimpleStringProperty status;
+        private final SimpleStringProperty userid = new SimpleStringProperty();
+        private final SimpleStringProperty name = new SimpleStringProperty();
+        private final SimpleStringProperty emailAddress = new SimpleStringProperty();
+        private final SimpleStringProperty loginName = new SimpleStringProperty();
+        private final SimpleStringProperty userRole = new SimpleStringProperty();
+        private final SimpleStringProperty status = new SimpleStringProperty();
 
-
-
-        User(String userid, String name, String emailAddress, String loginName, String userRole, String status){
-            this.userid = new SimpleStringProperty(userid);
-            this.name = new SimpleStringProperty(name);
-            this.emailAddress = new SimpleStringProperty(emailAddress);
-            this.loginName = new SimpleStringProperty(loginName);
-            this.userRole = new SimpleStringProperty(userRole);
-            this.status = new SimpleStringProperty(status);
-
+        public void setUserid(String userid) {
+            this.userid.set(userid);
         }
 
+        public void setName(String name) {
+            this.name.set(name);
+        }
+
+        public void setEmailAddress(String emailAddress) {
+            this.emailAddress.set(emailAddress);
+        }
+
+        public void setLoginName(String loginName) {
+            this.loginName.set(loginName);
+        }
+
+        public void setUserRole(String userRole) {
+            this.userRole.set(userRole);
+        }
+
+        public void setStatus(String status) {
+            this.status.set(status);
+        }
 
         public String getUserid() {
             return userid.get();
