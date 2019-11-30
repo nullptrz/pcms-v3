@@ -1,4 +1,0 @@
-U12345,Ali Ahsan Saeed,ahusunxy@gmail.com,ahusunxy,admin,active
-U16345,Shamma,ahusunxy@gmail.com,Sham,admin,active
-U12745,Sima,ahusunxy@gmail.com,cimu,admin,active
-U22345,Yameen,ahusunxy@gmail.com,yambro,admin,inactive

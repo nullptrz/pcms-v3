@@ -4,13 +4,24 @@
 
 .jfx-text-field{
     -fx-text-fill:#CFD8DC;
+    -fx-prompt-text-fill: #CFD8DC;
 }
 
 .jfx-password-field{
     -fx-text-fill: #CFD8DC;
+    -fx-prompt-text-fill: #CFD8DC;
 }
 
+.jfx-combo-box, .choice-box{
+    -fx-text-fill: #CFD8DC;
+    -fx-prompt-text-fill: #CFD8DC;
+
+}
 .glyph-icon{
     -fx-fill: #CFD8DC;
 }
 
+.combo-box .list-cell:filled:selected .text,
+.choice-box .list-cell:filled:selected .text {
+    -fx-fill: #CFD8DC;
+}

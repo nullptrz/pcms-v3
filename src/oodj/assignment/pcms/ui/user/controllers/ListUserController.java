@@ -63,7 +63,7 @@ public class ListUserController implements Initializable {
     }
 
     private void loadData() throws IOException {
-        Collection<User> list = Files.readAllLines(new File("C:\\JavaDev\\pcms-v3\\src\\oodj\\assignment\\pcms\\ui\\user\\controllers\\users.txt").toPath())
+        Collection<User> list = Files.readAllLines(new File("C:\\JavaDev\\pcms-v3\\data\\users.txt").toPath())
                 .stream()
                 .map(line -> {
                     String[] details = line.split(",");
