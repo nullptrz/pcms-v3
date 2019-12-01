@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
 <?import com.jfoenix.controls.JFXTabPane?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.control.ContextMenu?>
@@ -15,17 +16,17 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<StackPane fx:id="stackPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="895.0" styleClass="custom-pane" stylesheets="@../../resources/common.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment.pcms.ui.catalog.CatalogController">
+<StackPane fx:id="stackPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="950.0" styleClass="custom-pane" stylesheets="@../../resources/common.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment.pcms.ui.catalog.CatalogController">
    <children>
       <AnchorPane prefHeight="532.0" prefWidth="800.0">
          <children>
-            <AnchorPane prefHeight="520.0" prefWidth="800.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <AnchorPane prefHeight="535.0" prefWidth="950.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
-                  <JFXTabPane layoutY="34.0" prefHeight="501.0" prefWidth="895.0">
+                  <JFXTabPane layoutY="34.0" prefHeight="501.0" prefWidth="950.0">
                      <tabs>
                         <Tab text="Create Catalogs">
                           <content>
-                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="473.0" prefWidth="880.0">
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="473.0" prefWidth="956.0">
                                  <children>
                                     <Text fill="#fffb00" layoutX="64.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Products" wrappingWidth="184.13671875">
                                        <font>
@@ -42,8 +43,8 @@
                                           <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                                        </columnResizePolicy>
                                     </TableView>
-                                    <JFXButton layoutX="363.0" layoutY="139.0" prefHeight="25.0" prefWidth="75.0" text="Add &gt;&gt;" />
-                                    <JFXButton layoutX="362.0" layoutY="195.0" text="&lt;&lt; Remove" />
+                                    <JFXButton layoutX="363.0" layoutY="139.0" prefHeight="25.0" prefWidth="75.0" styleClass="default-button" text="Add &gt;&gt;" />
+                                    <JFXButton layoutX="362.0" layoutY="195.0" styleClass="default-button" text="&lt;&lt; Remove" />
                                     <TableView layoutX="453.0" layoutY="67.0" prefHeight="372.0" prefWidth="310.0">
                                       <columns>
                                         <TableColumn prefWidth="75.0" text="Item Name" />
@@ -59,7 +60,9 @@
                                           <Font size="25.0" />
                                        </font>
                                     </Text>
-                                    <JFXButton layoutX="772.0" layoutY="373.0" prefHeight="66.0" prefWidth="109.0" text="Create Catalog" />
+                                    <JFXButton layoutX="797.0" layoutY="373.0" prefHeight="66.0" prefWidth="127.0" styleClass="default-button" text="Create Catalog" />
+                                    <JFXComboBox layoutX="798.0" layoutY="197.0" prefHeight="25.0" prefWidth="126.0" promptText="Choose Occasion" />
+                                    <JFXComboBox layoutX="774.0" layoutY="141.0" prefHeight="25.0" prefWidth="162.0" promptText="Choose Discount Scheme" />
                                  </children>
                               </AnchorPane>
                           </content>
@@ -69,7 +72,7 @@
                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                  <children>
                                     <JFXTextField labelFloat="true" layoutX="14.0" layoutY="23.0" prefHeight="25.0" prefWidth="262.0" promptText="Search catalog by reference number or title" />
-                                    <TableView fx:id="tableView" layoutX="-1.0" layoutY="62.0" prefHeight="408.0" prefWidth="895.0">
+                                    <TableView fx:id="tableView" layoutX="-1.0" layoutY="62.0" prefHeight="408.0" prefWidth="956.0">
                                       <columns>
                                         <TableColumn prefWidth="123.0" text="Reference Number" />
                                         <TableColumn prefWidth="122.0" text="Catalog Title" />
@@ -93,6 +96,16 @@
                                     </TableView>
                                  </children>
                               </AnchorPane>
+                          </content>
+                        </Tab>
+                        <Tab text="Manage Discount">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                          </content>
+                        </Tab>
+                        <Tab text="Manage Occasions">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
                           </content>
                         </Tab>
                      </tabs>

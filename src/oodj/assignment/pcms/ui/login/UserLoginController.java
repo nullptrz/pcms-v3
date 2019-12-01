@@ -39,9 +39,6 @@ public class UserLoginController {
 
     @FXML
     void initialize() {
-        assert username != null : "fx:id=\"username\" was not injected: check your FXML file 'user_login.fxml'.";
-        assert password != null : "fx:id=\"password\" was not injected: check your FXML file 'user_login.fxml'.";
-        assert loginButton != null : "fx:id=\"loginButton\" was not injected: check your FXML file 'user_login.fxml'.";
 
     }
 }

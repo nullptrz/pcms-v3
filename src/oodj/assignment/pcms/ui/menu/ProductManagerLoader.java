@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 public class ProductManagerLoader extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("manager_menu.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("fxml/manager_menu.fxml"));
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
         primaryStage.setTitle("Admin Menu");

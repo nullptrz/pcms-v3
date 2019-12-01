@@ -1,22 +1,21 @@
-package assignment.pcms.ui.menu;
-
-import com.jfoenix.controls.JFXDrawer;
-import com.jfoenix.controls.JFXHamburger;
+package assignment.pcms.ui.menu.controllers;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import com.jfoenix.controls.JFXDrawer;
+import com.jfoenix.controls.JFXHamburger;
 import com.jfoenix.transitions.hamburger.HamburgerSlideCloseTransition;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 
-public class ProductManagerController implements Initializable {
+
+public class AdminController implements Initializable {
 
     @FXML
     private ResourceBundle resources;
@@ -25,13 +24,11 @@ public class ProductManagerController implements Initializable {
     private URL location;
 
     @FXML
-    private StackPane stackPane;
-
-    @FXML
     private JFXHamburger hamburger;
 
     @FXML
     private JFXDrawer drawer;
+
 
     @FXML
     public void initialize(URL url, ResourceBundle rb) {
@@ -42,10 +39,11 @@ public class ProductManagerController implements Initializable {
         }
     }
 
+
     private void initDrawer() throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("sidebar/manager_sidebar.fxml"));
-        VBox managerSideBar = loader.load();
-        drawer.setSidePane(managerSideBar);
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../sidebar/admin_sidebar.fxml"));
+        VBox adminSidebar = loader.load();
+        drawer.setSidePane(adminSidebar);
 
         HamburgerSlideCloseTransition task = new HamburgerSlideCloseTransition(hamburger);
         task.setRate(-1);
