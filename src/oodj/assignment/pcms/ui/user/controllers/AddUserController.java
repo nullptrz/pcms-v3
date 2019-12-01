@@ -18,6 +18,8 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
+import javafx.stage.Stage;
 
 public class AddUserController implements Initializable {
 
@@ -70,29 +72,48 @@ public class AddUserController implements Initializable {
         String password = this.password.getText();
         String status = this.statusCombo.getValue();
 
-        String line = userid + "," + name + "," + emailAddress + "," + role + "," + username + "," + password + "," + status;
+        String line = userid + "," + name + "," + emailAddress + "," + username + "," + role  + "," + status + "," + password ;
 
-        saveUserFile(line);
+        if(name.isEmpty() || emailAddress.isEmpty() || role.isEmpty() || username.isEmpty() || password.isEmpty() || status.isEmpty()){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setContentText(null);
+            alert.setContentText("Please fill all the fields");
+            alert.showAndWait();
+        }
+
+        else if(saveUserFile(line)){
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText(null);
+            alert.setContentText("User Details Saved Successfully");
+            alert.showAndWait();
+        }
+        else {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText(null);
+            alert.setContentText("Adding User Details Failed");
+            alert.showAndWait();
+        }
                 // Testing
         System.out.println("Save Button Pressed");
+        Stage stage = (Stage) saveButton.getScene().getWindow();
+        stage.close();
     }
 
-    private void saveUserFile(String line) {
+    private boolean saveUserFile(String line) {
         try (BufferedWriter bw = new BufferedWriter(new FileWriter("C:\\JavaDev\\pcms-v3\\data\\users.txt", true))) {
             bw.write(line);
             bw.newLine();
+            return true;
         } catch (IOException e) {
             e.printStackTrace();
-
+            return false;
         }
     }
 
     private String generateUserID(){
         Random random = new Random();
         int num = random.nextInt(9999);
-        String userid = "U" + num;
-        return userid;
-
+        return "U" + num;
     }
 
     ObservableList<String> roleList = FXCollections.observableArrayList("Administrator", "Product Manager");

@@ -25,3 +25,58 @@
 .choice-box .list-cell:filled:selected .text {
     -fx-fill: #CFD8DC;
 }
+
+.jfx-button{
+    -fx-background-color: #263238;
+    -fx-text-fill: #FFFFFF;
+}
+
+.jfx-hamburger-icon{
+    -fx-spacing: 7;
+}
+
+.jfx-hamburger-icon StackPane
+{
+    -fx-background-color: #CFD8DC;
+    -fx-background-radius: 5px;
+}
+
+.toolbar-button
+{
+    -fx-border-color: transparent;
+    -fx-background-color: derive(#CFD8DC, 10%);
+    -fx-background-radius: 0px;
+    -fx-border-radius: 0px;
+}
+.toolbar-button:hover
+{
+    -fx-background-color: #263238;
+    -fx-text-fill: #CFD8DC;
+}
+
+.toolbar-button:hover .glyph-icon, .toolbar-button:hover .glyph-icon
+{
+    -fx-fill: #CFD8DC;
+}
+
+.menu-bar, .menu-item{
+    -fx-background-color: #263238;
+}
+
+.menu-bar .label {
+    -fx-font-size: 10pt;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: #FFFFFF;
+}
+
+
+.main-text
+{
+    -fx-fill: #CFD8DC;
+    -fx-font-size: 14pt;
+    -fx-text-alignment: center;
+}
+
+.custom-pane{
+    -fx-background-color: derive(#263238, 5%);
+}
