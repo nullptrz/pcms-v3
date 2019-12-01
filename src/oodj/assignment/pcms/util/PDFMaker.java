@@ -4,7 +4,6 @@ import com.itextpdf.text.*;
 import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
-import javafx.scene.control.SelectionMode;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -13,12 +12,26 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 
 public class PDFMaker {
-    public static void main(String[] args) {
-        String fileName = "C:\\JavaDev\\pcms-v3\\data\\test.pdf";
+
+    private static PdfPCell productMaker(String productStr, String imagePath) throws IOException, BadElementException {
+        Image image = Image.getInstance(imagePath);
+        PdfPCell cell = new PdfPCell();
+        cell.addElement(image);
+        Paragraph p = new Paragraph(productStr);
+        p.setAlignment(Element.ALIGN_CENTER);
+        cell.addElement(p);
+        cell.setPadding(10);
+
+        return cell;
+    }
+
+    public static void createPDF(String fileName){
+        String fileStr = "C:\\JavaDev\\pcms-v3\\data\\" + fileName;
+
         Document document = new Document();
         try {
             try {
-                PdfWriter.getInstance(document, new FileOutputStream(new File(fileName)));
+                PdfWriter.getInstance(document, new FileOutputStream(new File(fileStr)));
                 document.open();
 
 
@@ -46,17 +59,5 @@ public class PDFMaker {
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
-
-    private static PdfPCell productMaker(String productStr, String imagePath) throws IOException, BadElementException {
-        Image image = Image.getInstance(imagePath);
-        PdfPCell cell = new PdfPCell();
-        cell.addElement(image);
-        Paragraph p = new Paragraph(productStr);
-        p.setAlignment(Element.ALIGN_CENTER);
-        cell.addElement(p);
-        cell.setPadding(10);
-
-        return cell;
     }
 }

@@ -1,5 +1,7 @@
 package assignment.pcms.ui.menu.sidebar;
 
+import assignment.pcms.ui.gui.TableProducts;
+import assignment.pcms.ui.gui.TableSupplier;
 import assignment.pcms.util.WindowLoader;
 import com.jfoenix.controls.JFXButton;
 import java.net.URL;
@@ -52,7 +54,9 @@ public class AdminSidebarController implements Initializable {
 
     @FXML
     void showProducts(ActionEvent event) {
-        WindowLoader.loadWindow(getClass().getResource("/assignment/pcms/ui/user/user_menu.fxml"), "User Menu", null);
+        TableProducts tblProd = new TableProducts();
+        tblProd.setVisible(true);
+        //WindowLoader.loadWindow(getClass().getResource("/assignment/pcms/ui/user/user_menu.fxml"), "User Menu", null);
     }
 
     @FXML
@@ -67,7 +71,9 @@ public class AdminSidebarController implements Initializable {
 
     @FXML
     void showSuppliers(ActionEvent event) {
-        WindowLoader.loadWindow(getClass().getResource("/assignment/pcms/ui/user/user_menu.fxml"), "User Menu", null);
+        TableSupplier tblSup = new TableSupplier();
+        tblSup.setVisible(true);
+        //WindowLoader.loadWindow(getClass().getResource("/assignment/pcms/ui/user/user_menu.fxml"), "User Menu", null);
     }
 
     @FXML

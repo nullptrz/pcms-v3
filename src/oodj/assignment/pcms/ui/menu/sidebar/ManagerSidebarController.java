@@ -1,6 +1,9 @@
 package assignment.pcms.ui.menu.sidebar;
 
 import assignment.pcms.ui.gui.EditCategory;
+import assignment.pcms.ui.gui.TableCategory;
+import assignment.pcms.ui.gui.TableProducts;
+import assignment.pcms.ui.other.Product;
 import assignment.pcms.util.WindowLoader;
 import com.jfoenix.controls.JFXButton;
 import java.net.URL;
@@ -46,19 +49,21 @@ public class ManagerSidebarController implements Initializable {
 
     @FXML
     void showCatalogs(ActionEvent event) {
-        WindowLoader.loadWindow(getClass().getResource("/assignment/pcms/ui/login/user_login.fxml"), "Product And Catalog Management System", null);
+        WindowLoader.loadWindow(getClass().getResource("/assignment/pcms/ui/catalog/catalog_menu.fxml"), "Product And Catalog Management System", null);
     }
 
     @FXML
     void showCategories(ActionEvent event) {
         //WindowLoader.loadWindow(getClass().getResource("/assignment/pcms/ui/login/user_login.fxml"), "Product And Catalog Management System", null);
-        EditCategory w = new EditCategory();
-        w.setVisible(true);
+        TableCategory tblCat = new TableCategory();
+        tblCat.setVisible(true);
     }
 
     @FXML
     void showProducts(ActionEvent event) {
-        WindowLoader.loadWindow(getClass().getResource("/assignment/pcms/ui/login/user_login.fxml"), "Product And Catalog Management System", null);
+        TableProducts tblProducts = new TableProducts();
+        tblProducts.setVisible(true);
+        //WindowLoader.loadWindow(getClass().getResource("/assignment/pcms/ui/login/user_login.fxml"), "Product And Catalog Management System", null);
     }
 
     @FXML

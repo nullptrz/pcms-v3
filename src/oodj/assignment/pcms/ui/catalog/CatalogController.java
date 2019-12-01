@@ -1,19 +1,29 @@
-/*package assignment.pcms.ui.catalog;
+package assignment.pcms.ui.catalog;
 
+import assignment.pcms.ui.other.Product;
+import assignment.pcms.util.PDFMaker;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
+
+import java.io.IOException;
 import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.sql.Time;
+import java.util.Date;
+import java.util.List;
 import java.util.ResourceBundle;
+import java.util.stream.Collectors;
 
 import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.layout.StackPane;
 
-public class CatalogController {
+public class CatalogController implements Initializable {
 
     @FXML
     private ResourceBundle resources;
@@ -25,22 +35,28 @@ public class CatalogController {
     private StackPane stackPane;
 
     @FXML
-    private TableColumn<Item, String> itemNameCol;
+    private TableView<Product> tableSelProd;
 
     @FXML
-    private TableColumn<Item, String> itemBrandCol;
+    private TableColumn<Product, String> itemNameCol;
 
     @FXML
-    private TableColumn<Item, String> quantityCol;
+    private TableColumn<Product, String> itemBrandCol;
 
     @FXML
-    private TableColumn<Item, String> itemNameCatCol;
+    private TableColumn<Product, String> quantityCol;
 
     @FXML
-    private TableColumn<Item, String> itemBrandCatCol;
+    private TableView<Product> tableCatProd;
 
     @FXML
-    private TableColumn<Item, String> quantityCatCol;
+    private TableColumn<Product, String> itemNameCatCol;
+
+    @FXML
+    private TableColumn<Product, String> itemBrandCatCol;
+
+    @FXML
+    private TableColumn<Product, String> quantityCatCol;
 
     @FXML
     private JFXComboBox<String> occasionCombo;
@@ -52,16 +68,10 @@ public class CatalogController {
     private JFXTextField searchText;
 
     @FXML
-    private TableView<Catalog> tableCat;
+    private TableView<?> tableCat;
 
     @FXML
-    private TableView<Item> tableSelProd;
-
-    @FXML
-    private TableView<Item> tableCatProd;
-
-    @FXML
-    private TableColumn<Catalog, String> refNumCol;
+    private TableColumn<Catalog, ?> refNumCol;
 
     @FXML
     private TableColumn<Catalog, String> catTitleCol;
@@ -81,18 +91,29 @@ public class CatalogController {
     @FXML
     private TableColumn<Catalog, String> timeCreatedCol;
 
+    public CatalogController() throws IOException {
+    }
+
     @FXML
     void createCatalog(ActionEvent event) {
-        // Call PDF Layout Maker
-        // Call PDF Maker and Send PDF Layout as Parameter
+
+        String catalogFile = null;
+        PDFMaker.createPDF("");
     }
+
+
 
     @FXML
     public void initialize(URL url, ResourceBundle rb) {
-
-
+        List<String> occasionList = null;
+        List<String> discountList = null;
+        try {
+            occasionList = Files.lines(Paths.get("C:\\JavaDev\\pcms-v3\\data\\occasion.txt")).collect(Collectors.toList());
+            occasionCombo.setItems(FXCollections.observableArrayList(occasionList));
+            discountList = Files.lines(Paths.get("C:\\JavaDev\\pcms-v3\\data\\discount.txt")).collect(Collectors.toList());
+            discountCombo.setItems(FXCollections.observableArrayList(discountList));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
-
-
 }
-*/
