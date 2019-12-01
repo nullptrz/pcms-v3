@@ -34,7 +34,7 @@
                       </Menu>
                     </menus>
                   </MenuBar>
-                  <JFXDrawer fx:id="drawer" layoutY="30.0" prefHeight="500.0" prefWidth="105.0" styleClass="jfx-drawer" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="30.0" />
+                  <JFXDrawer fx:id="drawer" layoutY="30.0" prefHeight="500.0" prefWidth="123.0" styleClass="jfx-drawer" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="30.0" />
                </children>
             </AnchorPane>
          </children>

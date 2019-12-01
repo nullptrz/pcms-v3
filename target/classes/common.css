@@ -80,3 +80,28 @@
 .custom-pane{
     -fx-background-color: derive(#263238, 5%);
 }
+
+.tab-label{
+    -fx-text-fill: 	ffff00;
+    -fx-font-size: 10pt;
+}
+
+.tab{
+    -fx-background-color: #263238;
+}
+
+.tab-header-background{
+    -fx-background-color: #263238;
+}
+
+.tab-main{
+    -fx-pref-height : 60;
+    -fx-max-height : 60;
+}
+
+.context-menu, .context-menu .label, .context-menu .menu-item{
+    -fx-background-color:  derive(#263238, 20%);
+    -fx-font-size: 14;
+    -fx-min-width: 150px;
+    -fx-text-fill: white;
+}

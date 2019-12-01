@@ -43,7 +43,7 @@
             </ImageView>
          </graphic>
       </JFXButton>
-      <JFXButton fx:id="logoutButton" alignment="TOP_CENTER" contentDisplay="TOP" onAction="#logout" prefHeight="67.0" prefWidth="230.0" text="Log Out">
+      <JFXButton fx:id="logoutButton" alignment="TOP_CENTER" contentDisplay="TOP" onAction="#logout" prefHeight="74.0" prefWidth="175.0" text="Log Out">
          <graphic>
             <ImageView fitHeight="59.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
                <image>
