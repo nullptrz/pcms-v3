@@ -113,7 +113,7 @@
                                        <contextMenu>
                                           <ContextMenu>
                                              <items>
-                                                <MenuItem mnemonicParsing="false" text="Set as Inactive" />
+                                                <MenuItem mnemonicParsing="false" onAction="#setUserStatus" text="Set as Inactive" />
                                                 <MenuItem mnemonicParsing="false" text="Edit" />
                                              </items>
                                           </ContextMenu>

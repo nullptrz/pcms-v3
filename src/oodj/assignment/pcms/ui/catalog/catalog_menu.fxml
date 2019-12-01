@@ -33,11 +33,11 @@
                                           <Font size="25.0" />
                                        </font>
                                     </Text>
-                                    <TableView layoutX="14.0" layoutY="67.0" prefHeight="372.0" prefWidth="334.0">
+                                    <TableView fx:id="tableSelProd" layoutX="14.0" layoutY="67.0" prefHeight="372.0" prefWidth="334.0">
                                       <columns>
-                                        <TableColumn prefWidth="75.0" text="Item Name" />
-                                        <TableColumn prefWidth="75.0" text="Item Brand" />
-                                          <TableColumn prefWidth="75.0" text="Quantity" />
+                                        <TableColumn fx:id="itemNameCol" prefWidth="75.0" text="Item Name" />
+                                        <TableColumn fx:id="itemBrandCol" prefWidth="75.0" text="Item Brand" />
+                                          <TableColumn fx:id="quantityCol" prefWidth="75.0" text="Quantity" />
                                       </columns>
                                        <columnResizePolicy>
                                           <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
@@ -45,11 +45,11 @@
                                     </TableView>
                                     <JFXButton layoutX="363.0" layoutY="139.0" prefHeight="25.0" prefWidth="75.0" styleClass="default-button" text="Add &gt;&gt;" />
                                     <JFXButton layoutX="362.0" layoutY="195.0" styleClass="default-button" text="&lt;&lt; Remove" />
-                                    <TableView layoutX="453.0" layoutY="67.0" prefHeight="372.0" prefWidth="310.0">
+                                    <TableView fx:id="tableCatProd" layoutX="453.0" layoutY="67.0" prefHeight="372.0" prefWidth="310.0">
                                       <columns>
-                                        <TableColumn prefWidth="75.0" text="Item Name" />
-                                        <TableColumn prefWidth="75.0" text="Item Brand" />
-                                          <TableColumn prefWidth="75.0" text="Quantity" />
+                                        <TableColumn fx:id="itemNameCatCol" prefWidth="75.0" text="Item Name" />
+                                        <TableColumn fx:id="itemBrandCatCol" prefWidth="75.0" text="Item Brand" />
+                                          <TableColumn fx:id="quantityCatCol" prefWidth="75.0" text="Quantity" />
                                       </columns>
                                        <columnResizePolicy>
                                           <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
@@ -60,9 +60,9 @@
                                           <Font size="25.0" />
                                        </font>
                                     </Text>
-                                    <JFXButton layoutX="797.0" layoutY="373.0" prefHeight="66.0" prefWidth="127.0" styleClass="default-button" text="Create Catalog" />
-                                    <JFXComboBox layoutX="798.0" layoutY="197.0" prefHeight="25.0" prefWidth="126.0" promptText="Choose Occasion" />
-                                    <JFXComboBox layoutX="774.0" layoutY="141.0" prefHeight="25.0" prefWidth="162.0" promptText="Choose Discount Scheme" />
+                                    <JFXButton layoutX="797.0" layoutY="373.0" onAction="#createCatalog" prefHeight="66.0" prefWidth="127.0" styleClass="default-button" text="Create Catalog" />
+                                    <JFXComboBox fx:id="occasionCombo" layoutX="798.0" layoutY="197.0" prefHeight="25.0" prefWidth="126.0" promptText="Choose Occasion" />
+                                    <JFXComboBox fx:id="discountCombo" layoutX="774.0" layoutY="141.0" prefHeight="25.0" prefWidth="162.0" promptText="Choose Discount Scheme" />
                                  </children>
                               </AnchorPane>
                           </content>
@@ -71,16 +71,16 @@
                           <content>
                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                  <children>
-                                    <JFXTextField labelFloat="true" layoutX="14.0" layoutY="23.0" prefHeight="25.0" prefWidth="262.0" promptText="Search catalog by reference number or title" />
-                                    <TableView fx:id="tableView" layoutX="-1.0" layoutY="62.0" prefHeight="408.0" prefWidth="956.0">
+                                    <JFXTextField fx:id="searchText" labelFloat="true" layoutX="14.0" layoutY="23.0" prefHeight="25.0" prefWidth="262.0" promptText="Search catalog by reference number or title" />
+                                    <TableView fx:id="tableCat" layoutX="-1.0" layoutY="62.0" prefHeight="408.0" prefWidth="956.0">
                                       <columns>
-                                        <TableColumn prefWidth="123.0" text="Reference Number" />
-                                        <TableColumn prefWidth="122.0" text="Catalog Title" />
-                                          <TableColumn prefWidth="122.0" text="Catalog Description" />
-                                          <TableColumn prefWidth="122.0" text="Season Period" />
-                                          <TableColumn prefWidth="122.0" text="Creator" />
-                                          <TableColumn prefWidth="122.0" text="Date Created" />
-                                          <TableColumn prefWidth="122.0" text="Time Created" />
+                                        <TableColumn fx:id="refNumCol" prefWidth="123.0" text="Reference Number" />
+                                        <TableColumn fx:id="catTitleCol" prefWidth="122.0" text="Catalog Title" />
+                                          <TableColumn fx:id="catDescCol" prefWidth="122.0" text="Catalog Description" />
+                                          <TableColumn fx:id="seasonPeriodCol" prefWidth="122.0" text="Season Period" />
+                                          <TableColumn fx:id="creatorCol" prefWidth="122.0" text="Creator" />
+                                          <TableColumn fx:id="dateCreatedCol" prefWidth="122.0" text="Date Created" />
+                                          <TableColumn fx:id="timeCreatedCol" prefWidth="122.0" text="Time Created" />
                                       </columns>
                                        <columnResizePolicy>
                                           <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />

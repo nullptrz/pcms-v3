@@ -1,16 +1,12 @@
 package assignment.pcms.ui.user;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.net.URL;
 import java.nio.file.Files;
-import java.util.Collection;
-import java.util.Random;
-import java.util.ResourceBundle;
+import java.util.*;
 import java.util.stream.Collectors;
 
+import assignment.pcms.backend.FileAccess;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXPasswordField;
@@ -218,7 +214,7 @@ public class UserMenuController implements Initializable {
     }
 
     @FXML
-    void save(ActionEvent event) {
+    void save(ActionEvent event) throws IOException {
         String userid = generateUserID();
         String name = this.name.getText();
         String emailAddress = this.emailAddress.getText();
@@ -249,6 +245,7 @@ public class UserMenuController implements Initializable {
             alert.showAndWait();
         }
         // Testing
+        loadData();
         System.out.println("Save Button Pressed");
     }
 
@@ -272,5 +269,38 @@ public class UserMenuController implements Initializable {
     ObservableList<String> roleList = FXCollections.observableArrayList("Administrator", "Product Manager");
     ObservableList<String> statusList = FXCollections.observableArrayList("Active", "Inactive");
 
+    @FXML
+    void setUserStatus(ActionEvent event) throws IOException {
+        User selectedUser = tableView.getSelectionModel().getSelectedItem();
+        if(selectedUser == null){
+            // display error message
+        }
+        else
+            {
+                try{
+                    FileAccess fa = new FileAccess();
+                    fa.setFileName("C:\\JavaDev\\pcms-v3\\data\\users.txt");
+                    ArrayList<String> oldData = fa.readFile();
+                    PrintWriter newData = new PrintWriter(new FileWriter("C:\\JavaDev\\pcms-v3\\data\\users.txt"));
+                    for (String oldLine : oldData) {
+                        String[] split = oldLine.split(",");
+                        if (split[0].equals(selectedUser.userid.getValue())) {
+                            if(selectedUser.status.getValue().equals("Inactive")){
 
+                                newData.println(oldLine.replace("Inactive", "Active"));
+                            }
+                            else if (selectedUser.status.getValue().equals("Active")) {
+                                newData.println(oldLine.replace("Active", "Inactive"));
+                            }
+                        } else {
+                            newData.println(oldLine);
+                        }
+                    }
+                    newData.close();
+                } catch (Throwable e) {
+                    e.printStackTrace();
+                }
+        }
+        loadData();
+    }
 }
