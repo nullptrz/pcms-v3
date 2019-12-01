@@ -12,7 +12,7 @@ public class ProductManagerLoader extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("fxml/manager_menu.fxml"));
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
-        primaryStage.setTitle("Admin Menu");
+        primaryStage.setTitle("Product Manager Menu");
         primaryStage.show();
     }
 

@@ -83,7 +83,8 @@ public class CatalogController {
 
     @FXML
     void createCatalog(ActionEvent event) {
-
+        // Call PDF Layout Maker
+        // Call PDF Maker and Send PDF Layout as Parameter
     }
 
     @FXML

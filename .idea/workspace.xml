@@ -2,13 +2,58 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="667988d0-d372-4135-9f8d-7c19a67890b5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_itextpdf_itextpdf_5_5_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/test.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/oodj/assignment/pcms/ui/gui/AddCategory.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/oodj/assignment/pcms/ui/gui/AddCategory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/oodj/assignment/pcms/ui/gui/AddItem.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/oodj/assignment/pcms/ui/gui/AddItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/oodj/assignment/pcms/ui/gui/AddSupplier.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/oodj/assignment/pcms/ui/gui/AddSupplier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/oodj/assignment/pcms/ui/gui/EditCategory.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/oodj/assignment/pcms/ui/gui/EditCategory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/oodj/assignment/pcms/ui/gui/EditItem.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/oodj/assignment/pcms/ui/gui/EditItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/oodj/assignment/pcms/ui/gui/EditSupplier.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/oodj/assignment/pcms/ui/gui/EditSupplier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/oodj/assignment/pcms/ui/gui/ProductCategory.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/oodj/assignment/pcms/ui/gui/ProductCategory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/oodj/assignment/pcms/ui/gui/TableCategory.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/oodj/assignment/pcms/ui/gui/TableCategory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/oodj/assignment/pcms/ui/gui/TableProducts.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/oodj/assignment/pcms/ui/gui/TableProducts.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/oodj/assignment/pcms/ui/gui/TableSupplier.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/oodj/assignment/pcms/ui/gui/TableSupplier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/oodj/assignment/pcms/ui/other/Catalogue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/oodj/assignment/pcms/ui/other/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/oodj/assignment/pcms/ui/other/FileAccess.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/oodj/assignment/pcms/ui/other/Items.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/oodj/assignment/pcms/ui/other/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/oodj/assignment/pcms/ui/other/Supplier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/oodj/assignment/pcms/ui/user/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/oodj/assignment/pcms/ui/user/edit_user.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/oodj/assignment/pcms/util/LayoutBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/oodj/assignment/pcms/util/PDFMaker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/users.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/users.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pcms-v3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/pcms-v3.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/oodj/assignment/pcms/resources/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/oodj/assignment/pcms/resources/common.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/oodj/assignment/pcms/ui/catalog/CatalogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oodj/assignment/pcms/ui/catalog/CatalogController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/oodj/assignment/pcms/ui/catalog/catalog_menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/oodj/assignment/pcms/ui/catalog/catalog_menu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/oodj/assignment/pcms/ui/login/UserLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oodj/assignment/pcms/ui/login/UserLogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/oodj/assignment/pcms/ui/login/UserLoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oodj/assignment/pcms/ui/login/UserLoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/oodj/assignment/pcms/ui/login/fxml/user_login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/oodj/assignment/pcms/ui/login/user_login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/oodj/assignment/pcms/ui/menu/ProductManagerLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oodj/assignment/pcms/ui/menu/ProductManagerLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/oodj/assignment/pcms/ui/menu/controllers/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oodj/assignment/pcms/ui/menu/controllers/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/oodj/assignment/pcms/ui/menu/controllers/ProductManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oodj/assignment/pcms/ui/menu/controllers/ProductManagerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/oodj/assignment/pcms/ui/supplier/supplier_menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/oodj/assignment/pcms/ui/supplier/supplier_menu.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/oodj/assignment/pcms/ui/user/UserMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oodj/assignment/pcms/ui/user/UserMenuController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/oodj/assignment/pcms/ui/user/user_menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/oodj/assignment/pcms/ui/user/user_menu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/assignment/pcms/ui/user/AddUser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assignment/pcms/resources/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/assignment/pcms/resources/common.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assignment/pcms/ui/login/UserLogin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/assignment/pcms/ui/login/UserLogin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assignment/pcms/ui/login/UserLoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/assignment/pcms/ui/login/UserLoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assignment/pcms/ui/login/fxml/user_login.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/common.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,27 +110,27 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.JavaFX" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\JavaDev\pcms-v3\src\oodj\assignment\pcms\ui\menu\sidebar" />
-      <recent name="C:\JavaDev\pcms-v3\src\oodj\assignment\pcms\ui\menu\controllers" />
       <recent name="C:\JavaDev\pcms-v3\src\oodj\assignment\pcms\ui\menu\fxml" />
-      <recent name="C:\JavaDev\pcms-v3\src\oodj\assignment\pcms\ui\menu" />
-      <recent name="C:\JavaDev\pcms-v3\src\oodj\assignment\pcms\ui\user\fxml" />
+      <recent name="C:\JavaDev\pcms-v3\src\oodj\assignment\pcms\ui\login" />
+      <recent name="C:\JavaDev\pcms-v3\src\oodj\assignment\pcms\ui\other" />
+      <recent name="C:\JavaDev\pcms-v3\src\oodj\assignment\pcms\ui\GUI" />
+      <recent name="C:\JavaDev\pcms-v3\src\oodj\assignment\pcms\ui\menu\sidebar" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.UserMenu">
-    <configuration name="AddUser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="assignment.pcms.ui.user.AddUser" />
+  <component name="RunManager" selected="Application.UserLogin">
+    <configuration name="AddCategory" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="assignment.pcms.ui.gui.AddCategory" />
       <module name="pcms-v3" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="assignment.pcms.ui.user.*" />
+          <option name="PATTERN" value="assignment.pcms.ui.gui.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -145,13 +190,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.AdminLoader" />
+      <item itemvalue="Application.ProductManagerLoader" />
+      <item itemvalue="Application.UserMenu" />
+      <item itemvalue="Application.AddCategory" />
+      <item itemvalue="Application.UserLogin" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.UserMenu" />
-        <item itemvalue="Application.AdminLoader" />
-        <item itemvalue="Application.ProductManagerLoader" />
         <item itemvalue="Application.UserLogin" />
-        <item itemvalue="Application.AddUser" />
+        <item itemvalue="Application.UserMenu" />
+        <item itemvalue="Application.ProductManagerLoader" />
+        <item itemvalue="Application.AdminLoader" />
+        <item itemvalue="Application.AddCategory" />
       </list>
     </recent_temporary>
   </component>
@@ -183,7 +235,7 @@
       <workItem from="1574989816983" duration="7683000" />
       <workItem from="1575087721670" duration="34000" />
       <workItem from="1575087821511" duration="33148000" />
-      <workItem from="1575175522095" duration="9580000" />
+      <workItem from="1575175522095" duration="29968000" />
     </task>
     <task id="LOCAL-00001" summary="Added Backend Code">
       <created>1575091571946</created>
@@ -227,7 +279,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575180001174</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="- Added Set Active/Inactive Functionality">
+      <created>1575185248473</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1575185248473</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -255,21 +314,26 @@
     <MESSAGE value="- Added Catalog Menu" />
     <MESSAGE value="- Added Category and Product Packages" />
     <MESSAGE value="- Added supplier UI and refactored User UI" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Added supplier UI and refactored User UI" />
+    <MESSAGE value="- Added Set Active/Inactive Functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Added Set Active/Inactive Functionality" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="552" y="212" key="#Project_Structure" timestamp="1575091666231">
+    <state x="552" y="212" key="#Project_Structure" timestamp="1575187307291">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state x="552" y="212" key="#Project_Structure/0.30.1920.1050/1920.30.1920.1050/3840.30.1920.1050@0.30.1920.1050" timestamp="1575091666231" />
-    <state x="414" y="209" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1575088135627">
+    <state x="552" y="212" key="#Project_Structure/0.30.1920.1050/1920.30.1920.1050/3840.30.1920.1050@0.30.1920.1050" timestamp="1575187307291" />
+    <state x="690" y="309" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1575207922483">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state x="414" y="209" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.30.1920.1050/1920.30.1920.1050/3840.30.1920.1050@0.30.1920.1050" timestamp="1575088135627" />
-    <state x="765" y="251" key="#com.intellij.ide.util.MemberChooser" timestamp="1575093254434">
+    <state x="690" y="309" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.30.1920.1050/1920.30.1920.1050/3840.30.1920.1050@0.30.1920.1050" timestamp="1575207922483" />
+    <state x="414" y="209" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1575186351500">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state x="765" y="251" key="#com.intellij.ide.util.MemberChooser/0.30.1920.1050/1920.30.1920.1050/3840.30.1920.1050@0.30.1920.1050" timestamp="1575093254434" />
+    <state x="414" y="209" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.30.1920.1050/1920.30.1920.1050/3840.30.1920.1050@0.30.1920.1050" timestamp="1575186351500" />
+    <state x="765" y="251" key="#com.intellij.ide.util.MemberChooser" timestamp="1575208455491">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="765" y="251" key="#com.intellij.ide.util.MemberChooser/0.30.1920.1050/1920.30.1920.1050/3840.30.1920.1050@0.30.1920.1050" timestamp="1575208455491" />
     <state x="449" y="174" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1574989666927">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
@@ -278,60 +342,64 @@
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state x="690" y="301" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.30.1920.1050/1920.30.1920.1050/3840.30.1920.1050@0.30.1920.1050" timestamp="1575179908921" />
-    <state x="583" y="59" key="CommitChangelistDialog2" timestamp="1575185229963">
+    <state x="583" y="59" key="CommitChangelistDialog2" timestamp="1575185247635">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state x="583" y="59" key="CommitChangelistDialog2/0.30.1920.1050/1920.30.1920.1050/3840.30.1920.1050@0.30.1920.1050" timestamp="1575185229963" />
+    <state x="583" y="59" key="CommitChangelistDialog2/0.30.1920.1050/1920.30.1920.1050/3840.30.1920.1050@0.30.1920.1050" timestamp="1575185247635" />
     <state x="591" y="229" key="FileChooserDialogImpl" timestamp="1575088603603">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state x="473" y="188" key="FileChooserDialogImpl/0.30.1536.834@0.30.1536.834" timestamp="1574989417202" />
     <state x="591" y="229" key="FileChooserDialogImpl/0.30.1920.1050/1920.30.1920.1050/3840.30.1920.1050@0.30.1920.1050" timestamp="1575088603603" />
-    <state width="1877" height="264" key="GridCell.Tab.0.bottom" timestamp="1575185229986">
+    <state width="1877" height="264" key="GridCell.Tab.0.bottom" timestamp="1575225628228">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state width="1493" height="193" key="GridCell.Tab.0.bottom/0.30.1536.834@0.30.1536.834" timestamp="1575048941648" />
-    <state width="1877" height="264" key="GridCell.Tab.0.bottom/0.30.1920.1050/1920.30.1920.1050/3840.30.1920.1050@0.30.1920.1050" timestamp="1575185229986" />
-    <state width="1877" height="264" key="GridCell.Tab.0.center" timestamp="1575185229986">
+    <state width="1877" height="264" key="GridCell.Tab.0.bottom/0.30.1920.1050/1920.30.1920.1050/3840.30.1920.1050@0.30.1920.1050" timestamp="1575225628228" />
+    <state width="1860" height="264" key="GridCell.Tab.0.bottom/0.30.1920.1050/1920.30.1920.1050/3840.30.1920.1050@1920.30.1920.1050" timestamp="1575189652775" />
+    <state width="1877" height="264" key="GridCell.Tab.0.center" timestamp="1575225628227">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state width="1493" height="193" key="GridCell.Tab.0.center/0.30.1536.834@0.30.1536.834" timestamp="1575048941648" />
-    <state width="1877" height="264" key="GridCell.Tab.0.center/0.30.1920.1050/1920.30.1920.1050/3840.30.1920.1050@0.30.1920.1050" timestamp="1575185229986" />
-    <state width="1877" height="264" key="GridCell.Tab.0.left" timestamp="1575185229986">
+    <state width="1877" height="264" key="GridCell.Tab.0.center/0.30.1920.1050/1920.30.1920.1050/3840.30.1920.1050@0.30.1920.1050" timestamp="1575225628227" />
+    <state width="1860" height="264" key="GridCell.Tab.0.center/0.30.1920.1050/1920.30.1920.1050/3840.30.1920.1050@1920.30.1920.1050" timestamp="1575189652775" />
+    <state width="1877" height="264" key="GridCell.Tab.0.left" timestamp="1575225628227">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state width="1493" height="193" key="GridCell.Tab.0.left/0.30.1536.834@0.30.1536.834" timestamp="1575048941648" />
-    <state width="1877" height="264" key="GridCell.Tab.0.left/0.30.1920.1050/1920.30.1920.1050/3840.30.1920.1050@0.30.1920.1050" timestamp="1575185229986" />
-    <state width="1877" height="264" key="GridCell.Tab.0.right" timestamp="1575185229986">
+    <state width="1877" height="264" key="GridCell.Tab.0.left/0.30.1920.1050/1920.30.1920.1050/3840.30.1920.1050@0.30.1920.1050" timestamp="1575225628227" />
+    <state width="1860" height="264" key="GridCell.Tab.0.left/0.30.1920.1050/1920.30.1920.1050/3840.30.1920.1050@1920.30.1920.1050" timestamp="1575189652775" />
+    <state width="1877" height="264" key="GridCell.Tab.0.right" timestamp="1575225628228">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state width="1493" height="193" key="GridCell.Tab.0.right/0.30.1536.834@0.30.1536.834" timestamp="1575048941648" />
-    <state width="1877" height="264" key="GridCell.Tab.0.right/0.30.1920.1050/1920.30.1920.1050/3840.30.1920.1050@0.30.1920.1050" timestamp="1575185229986" />
-    <state width="1877" height="330" key="GridCell.Tab.1.bottom" timestamp="1575184722331">
+    <state width="1877" height="264" key="GridCell.Tab.0.right/0.30.1920.1050/1920.30.1920.1050/3840.30.1920.1050@0.30.1920.1050" timestamp="1575225628228" />
+    <state width="1860" height="264" key="GridCell.Tab.0.right/0.30.1920.1050/1920.30.1920.1050/3840.30.1920.1050@1920.30.1920.1050" timestamp="1575189652775" />
+    <state width="1877" height="330" key="GridCell.Tab.1.bottom" timestamp="1575224389928">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state width="1877" height="330" key="GridCell.Tab.1.bottom/0.30.1920.1050/1920.30.1920.1050/3840.30.1920.1050@0.30.1920.1050" timestamp="1575184722331" />
-    <state width="1877" height="330" key="GridCell.Tab.1.center" timestamp="1575184722330">
+    <state width="1877" height="330" key="GridCell.Tab.1.bottom/0.30.1920.1050/1920.30.1920.1050/3840.30.1920.1050@0.30.1920.1050" timestamp="1575224389928" />
+    <state width="1877" height="330" key="GridCell.Tab.1.center" timestamp="1575224389928">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state width="1877" height="330" key="GridCell.Tab.1.center/0.30.1920.1050/1920.30.1920.1050/3840.30.1920.1050@0.30.1920.1050" timestamp="1575184722330" />
-    <state width="1877" height="330" key="GridCell.Tab.1.left" timestamp="1575184722330">
+    <state width="1877" height="330" key="GridCell.Tab.1.center/0.30.1920.1050/1920.30.1920.1050/3840.30.1920.1050@0.30.1920.1050" timestamp="1575224389928" />
+    <state width="1877" height="330" key="GridCell.Tab.1.left" timestamp="1575224389928">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state width="1877" height="330" key="GridCell.Tab.1.left/0.30.1920.1050/1920.30.1920.1050/3840.30.1920.1050@0.30.1920.1050" timestamp="1575184722330" />
-    <state width="1877" height="330" key="GridCell.Tab.1.right" timestamp="1575184722331">
+    <state width="1877" height="330" key="GridCell.Tab.1.left/0.30.1920.1050/1920.30.1920.1050/3840.30.1920.1050@0.30.1920.1050" timestamp="1575224389928" />
+    <state width="1877" height="330" key="GridCell.Tab.1.right" timestamp="1575224389928">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state width="1877" height="330" key="GridCell.Tab.1.right/0.30.1920.1050/1920.30.1920.1050/3840.30.1920.1050@0.30.1920.1050" timestamp="1575184722331" />
-    <state x="824" y="147" key="SettingsEditor" timestamp="1575176504102">
+    <state width="1877" height="330" key="GridCell.Tab.1.right/0.30.1920.1050/1920.30.1920.1050/3840.30.1920.1050@0.30.1920.1050" timestamp="1575224389928" />
+    <state x="824" y="147" key="SettingsEditor" timestamp="1575187658809">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state x="249" y="30" key="SettingsEditor/0.30.1536.834@0.30.1536.834" timestamp="1574994082748" />
-    <state x="824" y="147" key="SettingsEditor/0.30.1920.1050/1920.30.1920.1050/3840.30.1920.1050@0.30.1920.1050" timestamp="1575176504102" />
-    <state x="552" y="283" key="Vcs.Push.Dialog.v2" timestamp="1575180013265">
+    <state x="824" y="147" key="SettingsEditor/0.30.1920.1050/1920.30.1920.1050/3840.30.1920.1050@0.30.1920.1050" timestamp="1575187658809" />
+    <state x="552" y="283" key="Vcs.Push.Dialog.v2" timestamp="1575185259346">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state x="552" y="283" key="Vcs.Push.Dialog.v2/0.30.1920.1050/1920.30.1920.1050/3840.30.1920.1050@0.30.1920.1050" timestamp="1575180013265" />
+    <state x="552" y="283" key="Vcs.Push.Dialog.v2/0.30.1920.1050/1920.30.1920.1050/3840.30.1920.1050@0.30.1920.1050" timestamp="1575185259346" />
     <state x="581" y="332" key="com.intellij.ide.util.TipDialog" timestamp="1575175523779">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
@@ -341,9 +409,13 @@
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state x="767" y="466" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.30.1920.1050/1920.30.1920.1050/3840.30.1920.1050@0.30.1920.1050" timestamp="1575091463226" />
-    <state x="623" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1575093451186">
+    <state x="342" y="134" key="new project wizard" timestamp="1575187001076">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state x="623" y="257" width="672" height="678" key="search.everywhere.popup/0.30.1920.1050/1920.30.1920.1050/3840.30.1920.1050@0.30.1920.1050" timestamp="1575093451186" />
+    <state x="342" y="134" key="new project wizard/0.30.1920.1050/1920.30.1920.1050/3840.30.1920.1050@0.30.1920.1050" timestamp="1575187001076" />
+    <state x="623" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1575193621127">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="623" y="257" width="672" height="678" key="search.everywhere.popup/0.30.1920.1050/1920.30.1920.1050/3840.30.1920.1050@0.30.1920.1050" timestamp="1575193621127" />
   </component>
 </project>

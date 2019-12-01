@@ -47,20 +47,20 @@
     -fx-background-radius: 5px;
 }
 
-.toolbar-button
+.sidebar-button
 {
     -fx-border-color: transparent;
     -fx-background-color: derive(-fx-secondary, 10%);
     -fx-background-radius: 0px;
     -fx-border-radius: 0px;
 }
-.toolbar-button:hover
+.sidebar-button:hover
 {
     -fx-background-color: -fx-primary;
     -fx-text-fill: -fx-secondary;
 }
 
-.toolbar-button:hover .glyph-icon, .toolbar-button:hover .glyph-icon
+.sidebar-button:hover .glyph-icon, .sidebar-button:hover .glyph-icon
 {
     -fx-fill: -fx-secondary;
 }
@@ -109,6 +109,18 @@
     -fx-background-color:  derive(-fx-primary, 20%);
     -fx-font-size: 14;
     -fx-min-width: 150px;
+    -fx-text-fill: white;
+}
+
+.context-menu:hover{
+    -fx-background-color: #F4511E;
+}
+
+.menu-item .label {
+    -fx-text-fill: gray;
+}
+
+.menu-item:focused .label {
     -fx-text-fill: white;
 }
 

@@ -97,7 +97,7 @@
                            <content>
                               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                  <children>
-                                    <JFXTextField labelFloat="true" layoutX="14.0" layoutY="23.0" prefHeight="25.0" prefWidth="281.0" promptText="Search user by login name or email address" />
+                                    <JFXTextField fx:id="searchField" labelFloat="true" layoutX="14.0" layoutY="23.0" onKeyTyped="#searchUser" prefHeight="25.0" prefWidth="281.0" promptText="Search user by login name or email address" styleClass="jfx-text-field" />
                                     <TableView fx:id="tableView" layoutX="-1.0" layoutY="62.0" prefHeight="408.0" prefWidth="895.0">
                                        <columns>
                                           <TableColumn fx:id="useridCol" prefWidth="123.0" text="User ID" />
@@ -113,7 +113,7 @@
                                        <contextMenu>
                                           <ContextMenu>
                                              <items>
-                                                <MenuItem mnemonicParsing="false" onAction="#setUserStatus" text="Set as Inactive" />
+                                                <MenuItem mnemonicParsing="false" onAction="#setUserStatus" text="Set as Active/Inactive" />
                                                 <MenuItem mnemonicParsing="false" text="Edit" />
                                              </items>
                                           </ContextMenu>

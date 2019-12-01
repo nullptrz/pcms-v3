@@ -12,9 +12,13 @@ import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class ProductManagerController implements Initializable {
 
@@ -66,5 +70,17 @@ public class ProductManagerController implements Initializable {
             task.setRate(task.getRate() * -1);
             task.play();
         });
+    }
+
+    void loadWindow(String loc, String title){
+        try {
+            Parent parent = FXMLLoader.load(getClass().getResource(loc));
+            Stage stage = new Stage(StageStyle.DECORATED);
+            stage.setTitle(title);
+            stage.setScene(new Scene(parent));
+            stage.show();
+        } catch (IOException ex){
+            ex.printStackTrace();
+        }
     }
 }

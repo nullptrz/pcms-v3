@@ -5,15 +5,16 @@ import java.net.URL;
 import java.nio.file.Files;
 import java.util.*;
 import java.util.stream.Collectors;
-
+import assignment.pcms.ui.user.User;
 import assignment.pcms.backend.FileAccess;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
-import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -21,10 +22,14 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
+
 public class UserMenuController implements Initializable {
+
+    final ObservableList<User> data = FXCollections.observableArrayList();
 
     @FXML
     private ResourceBundle resources;
@@ -85,6 +90,10 @@ public class UserMenuController implements Initializable {
     private TableColumn<User, String> statusCol;
 
     @FXML
+    private JFXTextField searchField;
+
+
+    @FXML
     public void initialize(URL url, ResourceBundle rb) {
         try {
             loadData();
@@ -94,6 +103,7 @@ public class UserMenuController implements Initializable {
         userid.setText(generateUserID());
         roleCombo.setItems(roleList);
         statusCombo.setItems(statusList);
+
     }
 
     private void loadData() throws IOException {
@@ -114,6 +124,8 @@ public class UserMenuController implements Initializable {
 
         ObservableList<User> details = FXCollections.observableArrayList(list);
 
+        data.addAll(list);
+
         useridCol.setCellValueFactory(new PropertyValueFactory<>("userid"));
         nameCol.setCellValueFactory(new PropertyValueFactory<>("name"));
         emailAddressCol.setCellValueFactory(new PropertyValueFactory<>("emailAddress"));
@@ -125,90 +137,10 @@ public class UserMenuController implements Initializable {
 
     }
 
-    public static class User{
-        private final SimpleStringProperty userid = new SimpleStringProperty();
-        private final SimpleStringProperty name = new SimpleStringProperty();
-        private final SimpleStringProperty emailAddress = new SimpleStringProperty();
-        private final SimpleStringProperty loginName = new SimpleStringProperty();
-        private final SimpleStringProperty userRole = new SimpleStringProperty();
-        private final SimpleStringProperty status = new SimpleStringProperty();
-
-        public void setUserid(String userid) {
-            this.userid.set(userid);
-        }
-
-        public void setName(String name) {
-            this.name.set(name);
-        }
-
-        public void setEmailAddress(String emailAddress) {
-            this.emailAddress.set(emailAddress);
-        }
-
-        public void setLoginName(String loginName) {
-            this.loginName.set(loginName);
-        }
-
-        public void setUserRole(String userRole) {
-            this.userRole.set(userRole);
-        }
-
-        public void setStatus(String status) {
-            this.status.set(status);
-        }
-
-        public String getUserid() {
-            return userid.get();
-        }
-
-        public SimpleStringProperty useridProperty() {
-            return userid;
-        }
-
-        public String getName() {
-            return name.get();
-        }
-
-        public SimpleStringProperty nameProperty() {
-            return name;
-        }
-
-        public String getEmailAddress() {
-            return emailAddress.get();
-        }
-
-        public SimpleStringProperty emailAddressProperty() {
-            return emailAddress;
-        }
-
-        public String getLoginName() {
-            return loginName.get();
-        }
-
-        public SimpleStringProperty loginNameProperty() {
-            return loginName;
-        }
-
-        public String getUserRole() {
-            return userRole.get();
-        }
-
-        public SimpleStringProperty userRoleProperty() {
-            return userRole;
-        }
-
-        public String getStatus() {
-            return status.get();
-        }
-
-        public SimpleStringProperty statusProperty() {
-            return status;
-        }
-    }
-
-
     @FXML
     void cancel(ActionEvent event) {
+        Stage stage = (Stage) cancelButton.getScene().getWindow();
+        stage.close();
         // Testing
         System.out.println("Cancel Button Pressed");
     }
@@ -269,6 +201,7 @@ public class UserMenuController implements Initializable {
     ObservableList<String> roleList = FXCollections.observableArrayList("Administrator", "Product Manager");
     ObservableList<String> statusList = FXCollections.observableArrayList("Active", "Inactive");
 
+
     @FXML
     void setUserStatus(ActionEvent event) throws IOException {
         User selectedUser = tableView.getSelectionModel().getSelectedItem();
@@ -284,12 +217,12 @@ public class UserMenuController implements Initializable {
                     PrintWriter newData = new PrintWriter(new FileWriter("C:\\JavaDev\\pcms-v3\\data\\users.txt"));
                     for (String oldLine : oldData) {
                         String[] split = oldLine.split(",");
-                        if (split[0].equals(selectedUser.userid.getValue())) {
-                            if(selectedUser.status.getValue().equals("Inactive")){
+                        if (split[0].equals(selectedUser.getUserid())) {
+                            if(selectedUser.getStatus().equals("Inactive")){
 
                                 newData.println(oldLine.replace("Inactive", "Active"));
                             }
-                            else if (selectedUser.status.getValue().equals("Active")) {
+                            else if (selectedUser.getStatus().equals("Active")) {
                                 newData.println(oldLine.replace("Active", "Inactive"));
                             }
                         } else {
@@ -303,4 +236,31 @@ public class UserMenuController implements Initializable {
         }
         loadData();
     }
+
+    @FXML
+    void searchUser(KeyEvent event) {
+        FilteredList<User> filteredData = new FilteredList<>(data, p -> true);
+
+        searchField.textProperty().addListener((observable, oldValue, newValue ) -> {
+            filteredData.setPredicate(user -> {
+                if(newValue == null || newValue.isEmpty()){
+                    return true;
+                }
+                String lowerCaseFilter = newValue.toLowerCase();
+                if(user.getEmailAddress().toLowerCase().contains(lowerCaseFilter)){
+                    return true;
+                }
+                else if(user.getLoginName().toLowerCase().contains(lowerCaseFilter)){
+                    return true;
+                }
+                return false;
+            });
+        });
+
+        SortedList<User> sortedData = new SortedList<>(filteredData);
+
+        sortedData.comparatorProperty().bind(tableView.comparatorProperty());
+        tableView.setItems(sortedData);
+    }
+
 }
