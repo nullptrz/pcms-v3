@@ -1,3 +1,2 @@
-U9015,Ahsan,ahusunxy@gmail.com,ahusunxy,Administrator,Active,ahsan
-U6339,Ali,ahsan@gmail.com,ahsan,Administrator,Active,Ahsan
-U7746,shamma,sham@gmail.com,sham,Product Manager,Active,sham
+U3252,Ali Ahsan Saeed,ahsan@gmail.com,ahusunxy,Administrator,Active,ahsan
+U248,Aishath Shamma Ibrahim,sham@gmail.com,sham,Product Manager,Active,sham

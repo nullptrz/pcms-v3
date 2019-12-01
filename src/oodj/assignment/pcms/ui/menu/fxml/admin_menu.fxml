@@ -14,7 +14,7 @@
          <children>
             <AnchorPane prefHeight="520.0" prefWidth="800.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
-                  <JFXHamburger fx:id="hamburger" layoutX="115.0" layoutY="30.0" prefHeight="48.0" prefWidth="51.0" styleClass="jfx-hamburger-icon" />
+                  <JFXHamburger fx:id="hamburger" layoutX="150.0" layoutY="29.0" prefHeight="48.0" prefWidth="51.0" styleClass="jfx-hamburger-icon" />
                   <MenuBar layoutY="-1.0" prefHeight="30.0" prefWidth="800.0" styleClass="custom-pane">
                     <menus>
                       <Menu mnemonicParsing="false" text="File">
@@ -34,7 +34,7 @@
                       </Menu>
                     </menus>
                   </MenuBar>
-                  <JFXDrawer fx:id="drawer" layoutY="30.0" prefHeight="500.0" prefWidth="123.0" styleClass="jfx-drawer" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="30.0" />
+                  <JFXDrawer fx:id="drawer" defaultDrawerSize="150.0" layoutY="30.0" prefHeight="500.0" prefWidth="150.0" styleClass="jfx-drawer" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="30.0" />
                </children>
             </AnchorPane>
          </children>

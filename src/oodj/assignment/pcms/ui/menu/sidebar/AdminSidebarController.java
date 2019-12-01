@@ -1,13 +1,16 @@
 package assignment.pcms.ui.menu.sidebar;
 
+import assignment.pcms.util.WindowLoader;
 import com.jfoenix.controls.JFXButton;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
 
-public class AdminSidebarController {
+public class AdminSidebarController implements Initializable {
 
     @FXML
     private ResourceBundle resources;
@@ -36,45 +39,44 @@ public class AdminSidebarController {
     @FXML
     private JFXButton logoutButton;
 
+    private void closeWindow(){
+        Stage closeStage = (Stage) logoutButton.getScene().getWindow();
+        closeStage.close();
+    }
+
     @FXML
     void logout(ActionEvent event) {
-
+        WindowLoader.loadWindow(getClass().getResource("/assignment/pcms/ui/login/user_login.fxml"), "Product And Catalog Management System", null);
+        closeWindow();
     }
 
     @FXML
     void showProducts(ActionEvent event) {
-
+        WindowLoader.loadWindow(getClass().getResource("/assignment/pcms/ui/user/user_menu.fxml"), "User Menu", null);
     }
 
     @FXML
     void showProfile(ActionEvent event) {
-
+        WindowLoader.loadWindow(getClass().getResource("/assignment/pcms/ui/user/user_menu.fxml"), "User Menu", null);
     }
 
     @FXML
     void showSession(ActionEvent event) {
-
+        WindowLoader.loadWindow(getClass().getResource("/assignment/pcms/ui/user/user_menu.fxml"), "User Menu", null);
     }
 
     @FXML
     void showSuppliers(ActionEvent event) {
-
+        WindowLoader.loadWindow(getClass().getResource("/assignment/pcms/ui/user/user_menu.fxml"), "User Menu", null);
     }
 
     @FXML
-    void showUser(ActionEvent event) {
-
+    private void showUser(ActionEvent event) {
+        WindowLoader.loadWindow(getClass().getResource("/assignment/pcms/ui/user/user_menu.fxml"), "User Menu", null);
     }
 
     @FXML
-    void initialize() {
-        assert userButton != null : "fx:id=\"userButton\" was not injected: check your FXML file 'admin_sidebar.fxml'.";
-        assert supplierButton != null : "fx:id=\"supplierButton\" was not injected: check your FXML file 'admin_sidebar.fxml'.";
-        assert productButton != null : "fx:id=\"productButton\" was not injected: check your FXML file 'admin_sidebar.fxml'.";
-        assert showProducts != null : "fx:id=\"showProducts\" was not injected: check your FXML file 'admin_sidebar.fxml'.";
-        assert sessionButton != null : "fx:id=\"sessionButton\" was not injected: check your FXML file 'admin_sidebar.fxml'.";
-        assert profileButton != null : "fx:id=\"profileButton\" was not injected: check your FXML file 'admin_sidebar.fxml'.";
-        assert logoutButton != null : "fx:id=\"logoutButton\" was not injected: check your FXML file 'admin_sidebar.fxml'.";
+    public void initialize(URL url, ResourceBundle rb) {
 
     }
 }

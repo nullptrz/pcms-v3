@@ -50,14 +50,14 @@
 .sidebar-button
 {
     -fx-border-color: transparent;
-    -fx-background-color: derive(-fx-secondary, 10%);
+    -fx-background-color: derive(-fx-primary, 10%);
     -fx-background-radius: 0px;
     -fx-border-radius: 0px;
 }
 .sidebar-button:hover
 {
-    -fx-background-color: -fx-primary;
-    -fx-text-fill: -fx-secondary;
+    -fx-background-color: -fx-secondary;
+    -fx-text-fill: -fx-text-primary;
 }
 
 .sidebar-button:hover .glyph-icon, .sidebar-button:hover .glyph-icon

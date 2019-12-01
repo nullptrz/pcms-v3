@@ -42,7 +42,7 @@
                                                 <Insets bottom="10.0" left="10.0" right="10.0" top="25.0" />
                                              </VBox.margin>
                                           </JFXTextField>
-                                          <JFXTextField fx:id="emailAddress" focusColor="#c3d3ff" labelFloat="true" promptText="Enter Address">
+                                          <JFXTextField fx:id="emailAddress" focusColor="#c3d3ff" labelFloat="true" promptText="Enter Email Address">
                                              <VBox.margin>
                                                 <Insets bottom="10.0" left="10.0" right="10.0" top="25.0" />
                                              </VBox.margin>
@@ -114,7 +114,7 @@
                                           <ContextMenu>
                                              <items>
                                                 <MenuItem mnemonicParsing="false" onAction="#setUserStatus" text="Set as Active/Inactive" />
-                                                <MenuItem mnemonicParsing="false" text="Edit" />
+                                                <MenuItem mnemonicParsing="false" onAction="#showEdit" text="Edit" />
                                              </items>
                                           </ContextMenu>
                                        </contextMenu>

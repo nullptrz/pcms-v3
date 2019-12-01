@@ -5,7 +5,6 @@ import java.net.URL;
 import java.nio.file.Files;
 import java.util.*;
 import java.util.stream.Collectors;
-import assignment.pcms.ui.user.User;
 import assignment.pcms.backend.FileAccess;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
@@ -17,7 +16,10 @@ import javafx.collections.transformation.FilteredList;
 import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -25,6 +27,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 
 public class UserMenuController implements Initializable {
@@ -261,6 +264,32 @@ public class UserMenuController implements Initializable {
 
         sortedData.comparatorProperty().bind(tableView.comparatorProperty());
         tableView.setItems(sortedData);
+    }
+
+
+    @FXML
+    void showEdit(ActionEvent event) {
+        User selectedUser = tableView.getSelectionModel().getSelectedItem();
+        if(selectedUser == null) {
+            //display error
+        }
+
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource( "/assignment/pcms/ui/user/edit_user.fxml"));
+            Parent parent = loader.load();
+            EditUserController controller = (EditUserController) loader.getController();
+            assert selectedUser != null;
+            controller.setFields(selectedUser);
+
+            Stage stage = new Stage(StageStyle.DECORATED);
+            stage.setTitle("Edit User Details");
+            stage.setScene(new Scene(parent));
+            stage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
 }

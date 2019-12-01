@@ -7,20 +7,14 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="465.0" prefWidth="440.0" stylesheets="@../../resources/common.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="405.0" prefWidth="440.0" styleClass="root" stylesheets="@../../resources/common.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment.pcms.ui.user.EditUserController">
    <children>
-      <JFXTextField editable="false">
+      <JFXTextField fx:id="userid" editable="false">
          <VBox.margin>
             <Insets bottom="15.0" left="15.0" right="15.0" top="20.0" />
          </VBox.margin>
       </JFXTextField>
       <JFXTextField fx:id="name" promptText="Enter Name">
-         <VBox.margin>
-            <Insets bottom="15.0" left="15.0" right="15.0" top="20.0" />
-         </VBox.margin>
-      </JFXTextField>
-      <JFXTextField fx:id="address" promptText="Enter Address">
          <VBox.margin>
             <Insets bottom="15.0" left="15.0" right="15.0" top="20.0" />
          </VBox.margin>

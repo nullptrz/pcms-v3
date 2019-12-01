@@ -1,12 +1,16 @@
 package assignment.pcms.ui.menu.sidebar;
 
+import assignment.pcms.ui.gui.EditCategory;
+import assignment.pcms.util.WindowLoader;
 import com.jfoenix.controls.JFXButton;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.stage.Stage;
 
-public class ManagerSidebarController {
+public class ManagerSidebarController implements Initializable {
 
     @FXML
     private ResourceBundle resources;
@@ -29,38 +33,42 @@ public class ManagerSidebarController {
     @FXML
     private JFXButton logoutButton;
 
+    private void closeWindow(){
+        Stage closeStage = (Stage) logoutButton.getScene().getWindow();
+        closeStage.close();
+    }
+
     @FXML
     void logout(ActionEvent event) {
-
+        WindowLoader.loadWindow(getClass().getResource("/assignment/pcms/ui/login/user_login.fxml"), "Product And Catalog Management System", null);
+        closeWindow();
     }
 
     @FXML
     void showCatalogs(ActionEvent event) {
-
+        WindowLoader.loadWindow(getClass().getResource("/assignment/pcms/ui/login/user_login.fxml"), "Product And Catalog Management System", null);
     }
 
     @FXML
     void showCategories(ActionEvent event) {
-
+        //WindowLoader.loadWindow(getClass().getResource("/assignment/pcms/ui/login/user_login.fxml"), "Product And Catalog Management System", null);
+        EditCategory w = new EditCategory();
+        w.setVisible(true);
     }
 
     @FXML
     void showProducts(ActionEvent event) {
-
+        WindowLoader.loadWindow(getClass().getResource("/assignment/pcms/ui/login/user_login.fxml"), "Product And Catalog Management System", null);
     }
 
     @FXML
     void showProfile(ActionEvent event) {
-
+        WindowLoader.loadWindow(getClass().getResource("/assignment/pcms/ui/login/user_login.fxml"), "Product And Catalog Management System", null);
     }
 
     @FXML
-    void initialize() {
-        assert productButton != null : "fx:id=\"productButton\" was not injected: check your FXML file 'manager_sidebar.fxml'.";
-        assert categoryButton != null : "fx:id=\"categoryButton\" was not injected: check your FXML file 'manager_sidebar.fxml'.";
-        assert catalogButton != null : "fx:id=\"catalogButton\" was not injected: check your FXML file 'manager_sidebar.fxml'.";
-        assert profileButton != null : "fx:id=\"profileButton\" was not injected: check your FXML file 'manager_sidebar.fxml'.";
-        assert logoutButton != null : "fx:id=\"logoutButton\" was not injected: check your FXML file 'manager_sidebar.fxml'.";
+    public void initialize(URL url, ResourceBundle rb) {
 
     }
 }
+

@@ -21,30 +21,15 @@ public class PDFMaker {
                 PdfWriter.getInstance(document, new FileOutputStream(new File(fileName)));
                 document.open();
 
-                Image image = Image.getInstance("C:\\JavaDev\\pcms-v3\\src\\oodj\\assignment\\pcms\\resources\\images\\login.jpg");
 
-                PdfPTable table = new PdfPTable(3);
-                PdfPCell cell1 = new PdfPCell(new Phrase("Product 1"));
-                PdfPCell cell2 = new PdfPCell();
-                cell2.addElement(image);
-                Paragraph p = new Paragraph("Product Name\nProduct Description\nProduct Price");
-                p.setAlignment(Element.ALIGN_CENTER);
-                cell2.addElement(p);
-
-                PdfPCell cell3 = new PdfPCell(new Phrase("Cell 3"));
-                cell2.setPadding(10);
-                PdfPCell cell4 = new PdfPCell(new Phrase("Cell 4"));
-                PdfPCell cell5 = new PdfPCell(new Phrase("cell 5"));
-
-
-                table.addCell(cell1);
-                table.addCell(cell2);
-                table.addCell(cell3);
-                table.addCell(cell4);
-                table.addCell(cell5);
-
+                PdfPTable table = new PdfPTable(2);
+                table.addCell(productMaker("Headphone\nWireless\n50% Off\n$50.99", "C:\\JavaDev\\pcms-v3\\data\\images\\headphone.jpg"));
+                table.addCell(productMaker("Phone\nHuawei Latest\n30% OFF\n$40.88", "C:\\JavaDev\\pcms-v3\\data\\images\\phone.jpg"));
+                table.addCell(productMaker("SSD\nAddlink 1TB SSD\n40% OFF\n129.99$", "C:\\JavaDev\\pcms-v3\\data\\images\\ssd.jpg"));
+                table.addCell(productMaker("SSD\nAddlink 1TB SSD\n40% OFF\n129.99$", "C:\\JavaDev\\pcms-v3\\data\\images\\ssd.jpg"));
 
                 document.add(table);
+
 
                 document.close();
 
@@ -61,5 +46,17 @@ public class PDFMaker {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    private static PdfPCell productMaker(String productStr, String imagePath) throws IOException, BadElementException {
+        Image image = Image.getInstance(imagePath);
+        PdfPCell cell = new PdfPCell();
+        cell.addElement(image);
+        Paragraph p = new Paragraph(productStr);
+        p.setAlignment(Element.ALIGN_CENTER);
+        cell.addElement(p);
+        cell.setPadding(10);
+
+        return cell;
     }
 }
