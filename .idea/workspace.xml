@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="667988d0-d372-4135-9f8d-7c19a67890b5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/data/discount.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/occasion.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/oodj/assignment/pcms/ui/catalog/Catalog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/oodj/assignment/pcms/ui/session/Session.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/oodj/assignment/pcms/ui/session/SessionController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/oodj/assignment/pcms/ui/session/session_menu.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/oodj/assignment/pcms/ui/user/ProfileController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/oodj/assignment/pcms/ui/user/user_profile.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/oodj/assignment/pcms/util/IDGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/oodj/assignment/pcms/ui/catalog/CatalogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oodj/assignment/pcms/ui/catalog/CatalogController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/oodj/assignment/pcms/ui/menu/sidebar/AdminSidebarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oodj/assignment/pcms/ui/menu/sidebar/AdminSidebarController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/oodj/assignment/pcms/ui/menu/sidebar/ManagerSidebarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oodj/assignment/pcms/ui/menu/sidebar/ManagerSidebarController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/oodj/assignment/pcms/util/PDFMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oodj/assignment/pcms/util/PDFMaker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/oodj/assignment/pcms/ui/user/UserMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oodj/assignment/pcms/ui/user/UserMenuController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,7 +191,7 @@
       <workItem from="1574989816983" duration="7683000" />
       <workItem from="1575087721670" duration="34000" />
       <workItem from="1575087821511" duration="33148000" />
-      <workItem from="1575175522095" duration="43141000" />
+      <workItem from="1575175522095" duration="47080000" />
     </task>
     <task id="LOCAL-00001" summary="Added Backend Code">
       <created>1575091571946</created>
@@ -256,7 +256,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575237283160</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="- Menu Functionality Added">
+      <created>1575244077203</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1575244077203</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -287,7 +294,8 @@
     <MESSAGE value="- Added Set Active/Inactive Functionality" />
     <MESSAGE value="- Login Functionality Added" />
     <MESSAGE value="- Added Evans Classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Added Evans Classes" />
+    <MESSAGE value="- Menu Functionality Added" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Menu Functionality Added" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="212" key="#Project_Structure" timestamp="1575187307291">
@@ -302,10 +310,10 @@
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state x="414" y="209" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.30.1920.1050/1920.30.1920.1050/3840.30.1920.1050@0.30.1920.1050" timestamp="1575186351500" />
-    <state x="765" y="251" key="#com.intellij.ide.util.MemberChooser" timestamp="1575240683330">
+    <state x="765" y="251" key="#com.intellij.ide.util.MemberChooser" timestamp="1575245152217">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state x="765" y="251" key="#com.intellij.ide.util.MemberChooser/0.30.1920.1050/1920.30.1920.1050/3840.30.1920.1050@0.30.1920.1050" timestamp="1575240683330" />
+    <state x="765" y="251" key="#com.intellij.ide.util.MemberChooser/0.30.1920.1050/1920.30.1920.1050/3840.30.1920.1050@0.30.1920.1050" timestamp="1575245152217" />
     <state x="449" y="174" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1574989666927">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
@@ -314,38 +322,38 @@
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state x="690" y="301" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.30.1920.1050/1920.30.1920.1050/3840.30.1920.1050@0.30.1920.1050" timestamp="1575179908921" />
-    <state x="583" y="59" key="CommitChangelistDialog2" timestamp="1575237282408">
+    <state x="583" y="59" key="CommitChangelistDialog2" timestamp="1575244076501">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state x="583" y="59" key="CommitChangelistDialog2/0.30.1920.1050/1920.30.1920.1050/3840.30.1920.1050@0.30.1920.1050" timestamp="1575237282408" />
+    <state x="583" y="59" key="CommitChangelistDialog2/0.30.1920.1050/1920.30.1920.1050/3840.30.1920.1050@0.30.1920.1050" timestamp="1575244076501" />
     <state x="591" y="229" key="FileChooserDialogImpl" timestamp="1575227734976">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state x="473" y="188" key="FileChooserDialogImpl/0.30.1536.834@0.30.1536.834" timestamp="1574989417202" />
     <state x="591" y="229" key="FileChooserDialogImpl/0.30.1920.1050/1920.30.1920.1050/3840.30.1920.1050@0.30.1920.1050" timestamp="1575227734976" />
-    <state width="1877" height="264" key="GridCell.Tab.0.bottom" timestamp="1575243623967">
+    <state width="1877" height="264" key="GridCell.Tab.0.bottom" timestamp="1575245520927">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state width="1493" height="193" key="GridCell.Tab.0.bottom/0.30.1536.834@0.30.1536.834" timestamp="1575048941648" />
-    <state width="1877" height="264" key="GridCell.Tab.0.bottom/0.30.1920.1050/1920.30.1920.1050/3840.30.1920.1050@0.30.1920.1050" timestamp="1575243623967" />
+    <state width="1877" height="264" key="GridCell.Tab.0.bottom/0.30.1920.1050/1920.30.1920.1050/3840.30.1920.1050@0.30.1920.1050" timestamp="1575245520927" />
     <state width="1860" height="264" key="GridCell.Tab.0.bottom/0.30.1920.1050/1920.30.1920.1050/3840.30.1920.1050@1920.30.1920.1050" timestamp="1575189652775" />
-    <state width="1877" height="264" key="GridCell.Tab.0.center" timestamp="1575243623967">
+    <state width="1877" height="264" key="GridCell.Tab.0.center" timestamp="1575245520926">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state width="1493" height="193" key="GridCell.Tab.0.center/0.30.1536.834@0.30.1536.834" timestamp="1575048941648" />
-    <state width="1877" height="264" key="GridCell.Tab.0.center/0.30.1920.1050/1920.30.1920.1050/3840.30.1920.1050@0.30.1920.1050" timestamp="1575243623967" />
+    <state width="1877" height="264" key="GridCell.Tab.0.center/0.30.1920.1050/1920.30.1920.1050/3840.30.1920.1050@0.30.1920.1050" timestamp="1575245520926" />
     <state width="1860" height="264" key="GridCell.Tab.0.center/0.30.1920.1050/1920.30.1920.1050/3840.30.1920.1050@1920.30.1920.1050" timestamp="1575189652775" />
-    <state width="1877" height="264" key="GridCell.Tab.0.left" timestamp="1575243623966">
+    <state width="1877" height="264" key="GridCell.Tab.0.left" timestamp="1575245520926">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state width="1493" height="193" key="GridCell.Tab.0.left/0.30.1536.834@0.30.1536.834" timestamp="1575048941648" />
-    <state width="1877" height="264" key="GridCell.Tab.0.left/0.30.1920.1050/1920.30.1920.1050/3840.30.1920.1050@0.30.1920.1050" timestamp="1575243623966" />
+    <state width="1877" height="264" key="GridCell.Tab.0.left/0.30.1920.1050/1920.30.1920.1050/3840.30.1920.1050@0.30.1920.1050" timestamp="1575245520926" />
     <state width="1860" height="264" key="GridCell.Tab.0.left/0.30.1920.1050/1920.30.1920.1050/3840.30.1920.1050@1920.30.1920.1050" timestamp="1575189652775" />
-    <state width="1877" height="264" key="GridCell.Tab.0.right" timestamp="1575243623967">
+    <state width="1877" height="264" key="GridCell.Tab.0.right" timestamp="1575245520927">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state width="1493" height="193" key="GridCell.Tab.0.right/0.30.1536.834@0.30.1536.834" timestamp="1575048941648" />
-    <state width="1877" height="264" key="GridCell.Tab.0.right/0.30.1920.1050/1920.30.1920.1050/3840.30.1920.1050@0.30.1920.1050" timestamp="1575243623967" />
+    <state width="1877" height="264" key="GridCell.Tab.0.right/0.30.1920.1050/1920.30.1920.1050/3840.30.1920.1050@0.30.1920.1050" timestamp="1575245520927" />
     <state width="1860" height="264" key="GridCell.Tab.0.right/0.30.1920.1050/1920.30.1920.1050/3840.30.1920.1050@1920.30.1920.1050" timestamp="1575189652775" />
     <state width="1877" height="330" key="GridCell.Tab.1.bottom" timestamp="1575236955269">
       <screen x="0" y="30" width="1920" height="1050" />
@@ -368,10 +376,10 @@
     </state>
     <state x="249" y="30" key="SettingsEditor/0.30.1536.834@0.30.1536.834" timestamp="1574994082748" />
     <state x="824" y="147" key="SettingsEditor/0.30.1920.1050/1920.30.1920.1050/3840.30.1920.1050@0.30.1920.1050" timestamp="1575187658809" />
-    <state x="552" y="283" key="Vcs.Push.Dialog.v2" timestamp="1575237291238">
+    <state x="552" y="283" key="Vcs.Push.Dialog.v2" timestamp="1575244083290">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state x="552" y="283" key="Vcs.Push.Dialog.v2/0.30.1920.1050/1920.30.1920.1050/3840.30.1920.1050@0.30.1920.1050" timestamp="1575237291238" />
+    <state x="552" y="283" key="Vcs.Push.Dialog.v2/0.30.1920.1050/1920.30.1920.1050/3840.30.1920.1050@0.30.1920.1050" timestamp="1575244083290" />
     <state x="581" y="332" key="com.intellij.ide.util.TipDialog" timestamp="1575175523779">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>

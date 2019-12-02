@@ -6,6 +6,7 @@ import java.nio.file.Files;
 import java.util.*;
 import java.util.stream.Collectors;
 import assignment.pcms.backend.FileAccess;
+import assignment.pcms.util.IDGenerator;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXPasswordField;
@@ -150,7 +151,8 @@ public class UserMenuController implements Initializable {
 
     @FXML
     void save(ActionEvent event) throws IOException {
-        String userid = generateUserID();
+        IDGenerator idGen = new IDGenerator();
+        String userid = idGen.returnID("U");
         String name = this.name.getText();
         String emailAddress = this.emailAddress.getText();
         String role = this.roleCombo.getValue();
