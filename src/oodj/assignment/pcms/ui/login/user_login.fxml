@@ -8,15 +8,15 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="870.0" stylesheets="@../../resources/common.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment.pcms.ui.login.UserLoginController">
+<AnchorPane prefHeight="400.0" prefWidth="870.0" styleClass="root" stylesheets="@../../resources/common.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment.pcms.ui.login.UserLoginController">
    <children>
       <JFXTextField fx:id="username" focusColor="#e6ecff" labelFloat="true" layoutX="677.0" layoutY="130.0" promptText="Enter Username" />
       <JFXPasswordField fx:id="password" focusColor="#e6ecff" labelFloat="true" layoutX="677.0" layoutY="231.0" promptText="Enter Password" />
-      <JFXButton fx:id="loginButton" layoutX="671.0" layoutY="303.0" onAction="#login" prefHeight="25.0" prefWidth="135.0" stylesheets="@css/login.css" text="Login" textFill="WHITE" />
+      <JFXButton fx:id="loginButton" layoutX="671.0" layoutY="303.0" onAction="#login" prefHeight="25.0" prefWidth="135.0" styleClass="loginButton" text="Login" textFill="WHITE" />
       <FontAwesomeIconView glyphName="LOCK" layoutX="724.0" layoutY="85.0" size="45" />
       <FontAwesomeIconView glyphName="USER" layoutX="652.0" layoutY="148.0" size="18.0" />
       <FontAwesomeIconView glyphName="KEY" layoutX="652.0" layoutY="249.0" size="18" />
-      <ImageView fitHeight="411.0" fitWidth="585.0" layoutX="-1.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="401.0" fitWidth="585.0" layoutX="-1.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../resources/images/login.jpg" />
          </image>
