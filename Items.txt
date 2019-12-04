@@ -1,0 +1,2 @@
+ID52629|iphone 11|apple|asdada|1000.0|50|evan||Phone
+ID41894|samsung 9|samsun|sadsa|500.0|100|ahsan||Phone

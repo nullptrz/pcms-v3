@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane fx:id="stackPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="895.0" styleClass="custom-pane" stylesheets="@../../resources/common.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment.pcms.ui.catalog.CatalogController">
+   <children>
+      <AnchorPane prefHeight="532.0" prefWidth="800.0">
+         <children>
+            <AnchorPane prefHeight="520.0" prefWidth="800.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <JFXTabPane layoutY="34.0" prefHeight="501.0" prefWidth="895.0">
+                     <tabs>
+                        <Tab text="Add Suppliers">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="473.0" prefWidth="880.0">
+                                 <children>
+                                    <JFXTextField fx:id="supplierid" editable="false" layoutX="89.0" layoutY="24.0" prefHeight="25.0" prefWidth="387.0" />
+                                    <JFXTextField fx:id="supplierName" labelFloat="true" layoutX="90.0" layoutY="76.0" prefHeight="25.0" prefWidth="387.0" promptText="Enter Supplier Name" />
+                                    <JFXTextField fx:id="contactNumber" labelFloat="true" layoutX="90.0" layoutY="133.0" prefHeight="25.0" prefWidth="387.0" promptText="Contact Number" />
+                                    <JFXTextField fx:id="contactPerson" labelFloat="true" layoutX="89.0" layoutY="184.0" prefHeight="25.0" prefWidth="387.0" promptText="Contact Person" />
+                                    <JFXTextField fx:id="product" labelFloat="true" layoutX="89.0" layoutY="255.0" prefHeight="25.0" prefWidth="387.0" promptText="Product" />
+                                    <JFXComboBox fx:id="statusCombo" layoutX="89.0" layoutY="312.0" prefHeight="25.0" prefWidth="389.0" promptText="Choose Status" />
+                                 </children></AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab text="View Suppliers">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <JFXTextField labelFloat="true" layoutX="14.0" layoutY="23.0" prefHeight="25.0" prefWidth="281.0" promptText="Search by supplier id or supplier name or product" />
+                                    <TableView fx:id="tableView" layoutX="-1.0" layoutY="62.0" prefHeight="408.0" prefWidth="895.0">
+                                       <columns>
+                                          <TableColumn prefWidth="123.0" text="Supplier ID" />
+                                          <TableColumn prefWidth="122.0" text="Supplier Name" />
+                                          <TableColumn prefWidth="122.0" text="Contact Number" />
+                                          <TableColumn prefWidth="122.0" text="Contact Person" />
+                                          <TableColumn prefWidth="122.0" text="Product" />
+                                          <TableColumn prefWidth="122.0" text="Status" />
+                                       </columns>
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                       <contextMenu>
+                                          <ContextMenu>
+                                             <items>
+                                                <MenuItem mnemonicParsing="false" text="Set as Inactive/Active" />
+                                                <MenuItem mnemonicParsing="false" text="Edit" />
+                                             </items>
+                                          </ContextMenu>
+                                       </contextMenu>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                     </tabs>
+                  </JFXTabPane>
+                  <MenuBar layoutY="-1.0" prefHeight="30.0" prefWidth="800.0" styleClass="custom-pane">
+                     <menus>
+                        <Menu mnemonicParsing="false" text="File">
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="Close" />
+                           </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Edit">
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="Delete" />
+                           </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Help">
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="About" />
+                           </items>
+                        </Menu>
+                     </menus>
+                  </MenuBar>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
